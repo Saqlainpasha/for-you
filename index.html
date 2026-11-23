@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You</title>
+  <meta name="description" content="A little something I made for you.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Soft floating petals -->
+  <div class="petals" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <main class="card">
+
+    <!-- SECTION 1 – LANDING -->
+    <section class="fade-in" style="animation-delay: 0.1s;">
+      <p class="eyebrow">A little something I made for you.</p>
+      <h1>To My<br>Favourite Person</h1>
+      <div class="divider"><span class="heart">&#9825;</span></div>
+      <p class="intro">I wanted to give you something that you could keep.
+      Something you could listen to whenever you feel like it.</p>
+
+      <div class="cover-frame">
+        <img src="cover.jpg" alt="A photo just for you" id="coverImage">
+      </div>
+    </section>
+
+    <!-- SECTION 2 – SONG PLAYER -->
+    <section class="player-section fade-in" style="animation-delay: 0.35s;">
+      <h2 class="song-title">For You, Always</h2>
+      <p class="song-subtitle">A song from my heart.</p>
+
+      <div class="player">
+        <button id="playBtn" class="play-btn" aria-label="Play or pause the song">
+          <svg id="iconPlay" viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          <svg id="iconPause" viewBox="0 0 24 24" width="26" height="26" fill="currentColor" style="display:none;">
+            <path d="M6 5h4v14H6zM14 5h4v14h-4z"/>
+          </svg>
+        </button>
+
+        <div class="player-body">
+          <div class="progress-wrap" id="progressWrap">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <div class="times">
+            <span id="currentTime">0:00</span>
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+      </div>
+
+      <audio id="song" src="song.mp3" preload="metadata"></audio>
+    </section>
+
+    <!-- SECTION 3 – PERSONAL MESSAGE -->
+    <section class="message fade-in" style="animation-delay: 0.6s;">
+      <p>&ldquo;Some things are easier to feel than to say. So I thought I&rsquo;d
+      let this song say a little of what my heart wants you to know.
+      This is just for you.&rdquo;</p>
+    </section>
+
+    <!-- SECTION 4 – ENDING -->
+    <footer class="ending fade-in" style="animation-delay: 0.85s;">
+      <p>Whenever you listen to this, remember that someone made this with you in mind.</p>
+      <div class="heart-final">&#10084;</div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
